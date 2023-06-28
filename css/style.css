@@ -1,0 +1,165 @@
+/*Root*/
+:root {
+    --main-color: rgb(0, 0, 0);
+    --secondary-color: rgb(68, 68, 68);
+    --font-color: rgb(255, 255, 255);
+    --link-color: #125ce6;
+    --gap: 15px;
+}
+
+body, h1, h2, ul, p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/*Links*/
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover, a:focus, a:active {
+    opacity: 0.3;
+}
+
+
+/*HTML*/
+html {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+}
+
+/*Body*/
+body, .avatar {
+    margin: 0 auto;
+}
+
+.avatar, header, main, h1, .description, .links {
+    margin-bottom: var(--gap);
+}
+
+.nickname, h1, .description, footer {
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    min-height: calc(100vh - var(--gap) * 2);
+    background-color: var(--main-color);
+    padding: var(--gap);
+    box-shadow: 0 0 10px 0 rgba(255,255,255,0.1);
+}
+
+header {
+    position: relative;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/*Header*/
+.language {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.avatar {
+    --avatar-size: 150px;
+
+    height: var(--avatar-size);
+    width: var(--avatar-size);
+    display: block;
+    border-radius: 50%;
+    border: 2px solid var(--link-color);
+    object-fit: cover;
+}
+
+.nickname {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+/*Main*/
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.links img {
+    --link-size: 30px;
+
+    height: var(--link-size);
+    width: var(--link-size);
+}
+
+.large-button {
+    display: flex;
+    border-radius: 35px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    padding-bottom: 1px;
+    border: 2px solid var(--link-color);
+    background-color: var(--font-color);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*Screen 400px*/
+@media screen and (min-width: 440px) {
+    body {
+        width: 410px;
+    }
+}
+
+/*Screen 530 px*/
+@media screen and (min-width: 530px) {
+    body {
+        width: 500px;
+    }
+
+    .avatar {
+        --avatar-size: 200px;
+
+        height: var(--avatar-size);
+        width: var(--avatar-size);
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .nickname {
+        font-size: 26px;
+    }
+
+    .large-button {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .links img {
+        --link-size: 35px;
+
+        height: var(--link-size);
+        width: var(--link-size);
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}
